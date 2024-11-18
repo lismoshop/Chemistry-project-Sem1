@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalisation Of a Wave Function</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <pre>N   O   R   M   A   L   I   S   A   T   I   O   N</pre>
+        </nav>
+    </header>
+    <!-- <div class="sidenav">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div> -->
+    <div class="main">
+        
+        <h1>what is normalisation?</h1>
+        <p class="content">
+            Normalization is the process of adjusting the wavefunction Ψ(x) so that <u>the integral of its squared modulus over all space equals 1</u>: <br>
+            <span class="normform"><sub>−∞</sub>∫<sup>∞</sup> |Ψ(x)|<sup>2</sup>.dx = 1</span><br>
+            Here, |Ψ(x)|<sup>2</sup>represents the probability density, which describes the likelihood of finding the particle at a specific position x.
+        </p>
+        <p class="content">
+            <h2>-------- KEY POINTS --------</h2>
+            <ul type="none">
+                <li><p><b style="font-size: larger;">• If Ψ is not normalized, then: </b><br> ∫ |Ψ(x)|<sup>2</sup>.dτ = A ≠ 1</span></p></li>
+                <li><p><b style="font-size: larger;">• A corresponding normalized wavefunction (Ψ<sub>Norm</sub>) can be defined: </b><br> Ψ<sub>Norm</sub>(r) = 1/√2 Ψ(r) <br><b style="font-size: larger;"> such that: </b><br> ∫ |Ψ<sub>Norm</sub>(x)|<sup>2</sup>.dτ = 1</p></li>
+                <li><p><b style="font-size: larger;">• The factor (1/√A) is known as the normalisation constant (sometimes represented by N).</b></p></li>
+            </ul>
+        </p>
+        <p class="content">
+            <h2>-------- PROPERTIES OF ACCEPTABLE WAVEFUNCTION --------</h2>
+            <ul type="none">
+                <li style="font-size: larger;"><p>• Ψ must be finite everywhere.</p></li>
+                <li style="font-size: larger;"><p>• Ψ must be single valued.</p></li>
+                <li style="font-size: larger;"><p>• Ψ and dΨ/dx must be continuous for finite well-behaved potentials V(x).</p></li>
+                <li style="font-size: larger;"><p>• Ψ must be normalizable (generally Ψ → 0 as x → inf).</p></li>
+            </ul>
+        </p>
+        <br><br>
+
+        <p class="content">
+            <h2>-------- SOLVING A WAVEFUNCTION --------</h2>
+            <p><b>Enter your wavefunction to be integrated: <input type="text" id="uiwavefunctioninp" placeholder="Write your wavefunction..." /></b></p>
+            <p><b>Enter your wavefunction's lower limit: <input type="text" id="uiwavefunctionlower" placeholder="Write your wavefunction..." /></b></p>
+            <p><b>Enter your wavefunction's upper limit': <input type="text" id="uiwavefunctionupper" placeholder="Write your wavefunction..." /></b></p>
+            <p><b>Output: </b> <span id="uiwavefunctionoutp"></span></p>
+            <p><button py-click="waveoutput">Translate</button></p>
+
+        </p>
+
+
+        <!-- <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
+        <p>Translate English into Pirate speak...</p>
+        <input type="text" id="english" placeholder="Type English here..." />
+        <button py-click="translate_english">Translate</button>
+        <div id="output"></div> -->
+       
+    </div>
+
+   
+
+
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+</body>
+
+</html>
